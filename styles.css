@@ -582,7 +582,7 @@ slider {
   }
 
 }
-/* ======= MENÚ RESPONSIVE ======= */
+/* ===== MENÚ RESPONSIVE ===== */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -613,6 +613,7 @@ slider {
   }
 }
 
+/* Menú más chico (celulares angostos) */
 @media (max-width: 480px) {
   .nav-links {
     width: 100%;
@@ -620,5 +621,25 @@ slider {
   .nav-links li a {
     padding: 0.8rem;
     font-size: 1rem;
+  }
+}
+/* ===== TARIFAS RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .tarifas-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .tarifa-card {
+    flex: 0 0 80%; /* cada card ocupa 80% de ancho */
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 480px) {
+  .tarifa-card {
+    flex: 0 0 95%; /* ocupa casi toda la pantalla */
   }
 }
