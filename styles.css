@@ -580,4 +580,45 @@ slider {
   .contacto-container {
     flex-direction: column;
   }
+
+}
+/* ======= MENÚ RESPONSIVE ======= */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  header nav {
+    position: relative;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #0f0f0f;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  .nav-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    width: 100%;
+  }
+  .nav-links li a {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
 }
